@@ -1,0 +1,312 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Time Table</title>
+<!-- Bootstrap -->
+<%--<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />--%>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/StyleSheet.css" rel='stylesheet' type='text/css' />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- start plugins -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!----font-Awesome----->
+   	<link type ="text/css"  rel="stylesheet" href="fonts/css/font-awesome.min.css"/>
+    
+<!----font-Awesome----->
+<style type="text/css" >
+                .table1 table tbody tr td a,
+            .table1 table tbody tr td span
+            {
+                position :relative ;
+                float:left ;
+                padding :10px 13px;
+                margin-left :-1px;
+                color:#5b5b5b;
+                line-height :1.42857143;
+                text-decoration :none;   
+                border:1px solid #FF5454;
+                font-size :14px;
+    
+            }  
+            .table1 table > tbody > tr > td > span
+            {
+                z-index :3;
+                color :#ffffff;
+    
+                cursor :default ;
+                margin-top :8px;
+                background-color :#FF5454;
+    
+    
+            }
+            .table1 table > tbody > tr > td:first-child > a,
+            .table1 table > tbody > tr > td:first-child > span
+            {
+                margin-right :0;
+                border-top-left-radius:4px;
+                border-bottom-left-radius:4px;
+   
+    
+            }
+            .table1 table > tbody > tr > td:last-child > a,
+            .table1 table > tbody > tr > td:last-child > span
+            {
+                border-top-right-radius:4px;
+                border-bottom-right-radius:4px;
+    
+            }
+            .table1 table > tbody > tr > td > a:hover,
+            .table1 table > tbody > tr > td > span:hover,
+            .table1 table > tbody > tr > td > a:focus,
+            .table1 table > tbody > tr > td > span:focus
+            {
+                z-index :3;
+                color:white;
+                background-color :#FF5454;
+                border-color:#ffffff;
+            }
+            .vl{float: right; margin-top: -30px; margin-right: 340px;}
+            .link
+            {
+                background:#ffffff;     
+                font-size: 12px;
+                text-transform:uppercase ; 
+	            cursor :pointer ;
+	            color :#5b5b5b;
+                padding: 0.6em 1.5em;
+                border-radius: 0.2em;
+	            -webkit-border-radius: 0.2em;
+	            -moz-border-radius: 0.2em;
+	            -ms-border-radius: 0.2em;
+	            -o-border-radius: 0.2em;
+                transition: 0.5s all;
+                -webkit-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                -moz-transition: 0.5s all;
+                -ms-transition: 0.5s all;
+                text-transform: uppercase;
+                -webkit-appearance: none;
+                border: 1px solid #FF5454;
+               
+            }
+            .link:hover
+            {
+                    color :#fff; 
+                    border: 1px solid #ffffff;
+                    background :#FF5454;
+                    text-decoration :none;
+            } 
+
+            .submit
+            {
+                font-family: 'open_sansregular';
+	            background: #FF5454;
+	            text-transform: uppercase;
+	            font-size: 13px;
+	            border:  2px solid #FF5454;
+	            cursor: pointer;
+	           color :#ffffff;
+                padding: 0.6em 1.5em;
+                border-radius: 0.2em;
+	            -webkit-border-radius: 0.2em;
+	            -moz-border-radius: 0.2em;
+	            -ms-border-radius: 0.2em;
+	            -o-border-radius: 0.2em;
+               
+                -ms-transition: 0.5s all;
+                text-transform: uppercase;
+                -webkit-appearance: none;
+	            outline: none;
+	            -webkit-transition: all 0.3s ease-in-out;
+	            -moz-transition: all 0.3s ease-in-out;
+	            -o-transition: all 0.3s ease-in-out;
+	            transition: all 0.3s ease-in-out;
+	            
+            }
+            
+            .mp
+            {
+                background :white;
+                border :10px solid #d0d0d0;
+                padding-top :10px;
+                padding-left :10px;
+                width :400px;
+                height :350px;
+                z-index :100;
+                
+            }
+            .mb
+            {
+                background :black;
+                filter:alpha(opacity=90);
+                opacity:0.8;
+            }
+            .lb
+            {
+                display:block;
+	            text-transform: capitalize;
+	            font-size: 14px;
+	            color: #5b5b5b;
+	            font-weight: normal;
+	            margin-bottom: 10px;
+	            outline :none;
+            } 
+            .lb:hover{text-decoration :none;color: #5b5b5b;}        
+            .tb
+            {
+                background: #FF5454;
+                color: #ffffff;
+	            text-transform: uppercase;
+	            font-family: 'open_sansregular';
+	            font-weight: normal;
+	            font-size: 13px;  
+	        }
+	        .tb:hover
+	        {
+	            background: #3B3B3B;
+	            color: #ffffff;
+	            padding: 0;
+	        }
+	        .form-control2 {
+              display: block;
+              width: 100%;
+              height: 34px;
+              padding: 6px 12px;
+              font-size: 14px;
+              line-height: 1.42857143;
+              color: #555;
+              background-color: #fff;
+              background-image: none;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+              -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            }
+            .form-control2:focus {
+              border-color: #ff5454;
+              outline: 0;
+              box-shadow:none;
+            }
+            #mainav{text-align:center; text-transform:uppercase;}
+            #mainav ul{color: #ffffff; }
+            #mainav ul ul{z-index:9999; position:absolute; width:170px;background: #3B3B3B; box-shadow:0px 8px 16px opx rgba(0,0,0,0.2); }
+            #mainav ul ul ul{left:170px; top:0;}
+            #mainav li{display:inline-block; position:relative; }
+            #mainav li:last-child{margin-right:0;}
+            #mainav li li{width:100%; margin:0; text-align:left; text-transform:none;}
+            #mainav li li a{border:solid; border-width:0 0 1px 0;}
+            #mainav li li:last-child a{}
+            #mainav li li a, #mainav li li .drop{display:block; margin:0; padding:18px 22px;color: #ffffff;}
+            #mainav ul ul{display:none;}
+            #mainav ul li:hover > ul{display:block;}
+            #mainav ul li:hover > ul li a:hover{background: #FF5454;color: #ffffff;}
+
+
+        </style>
+</head>
+<body>
+<div class="header_bg1">
+<div class="container">
+	<div class="row header">
+		<div class="logo navbar-left">
+			<h1><a href="index.html">Time Table</a></h1>
+		</div>
+		<%--<div class="h_search navbar-right">
+			<form>
+				<input type="text" class="text" value="Enter text here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter text here';}">
+				<input type="submit" value="search"/>
+			</form>
+		</div>--%>
+		<div class="clearfix"></div>
+	</div>
+	<div class="row h_menu">
+		<nav class="navbar navbar-default navbar-left" role="navigation">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div id ="mainav">
+		      <ul class="nav navbar-nav" >
+		        <li ><a href="Default.aspx">Home</a></li>
+                <li><a href="AddTeachers.aspx">Teacher</a></li>
+		        <li><a href="AddSubject.aspx">Subjects</a></li>
+		        <%--<li  class ="drp"><a href="AddNewTimeTable.aspx" >Time Table &#9660;</a>
+                    <ul id="dd" class="drp-content nav">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript &#9654;</a>
+                        <ul class="drp-content nav">
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">HTML</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>--%>
+                <li> <a href="#" >Time Table &#9660;</a>
+                    <ul class ="nav">
+                    <li><a href="#">Create &#9654;</a>
+                        <ul class ="nav ">
+                            <li><a href="AddNewTimeTable.aspx">Semester Wise</a></li>
+                            <li><a href="CreateMasterTimeTable.aspx">Master Time Table</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Edit &#9654;</a>
+                        <ul class ="nav ">
+                            <li><a href="UpdateTimeTable.aspx">Update</a></li>
+                            <li><a href="DeleteTimeTable.aspx">Delete</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">View &#9654;</a>
+                        <ul class ="nav ">
+                            <li><a href="ViewTeacherWise.aspx">Teacher Wise</a></li>
+                            <li><a href="ViewTimeTable.aspx">Course Wise</a></li>
+                            <li><a href="ViewMasterTimeTable.aspx">Master Time Table</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="AddClass.aspx">Classrooms</a></li>
+                <li class="active"><a href="Login.aspx">Login</a></li>
+                 <li><a href="#">About Us</a></li>
+		        <li><a href="#">Contact</a></li>
+                <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl ="~/Default.aspx" >Logout</asp:HyperLink></li>
+               </ul>
+               </div> 
+		    </div><!-- /.navbar-collapse -->
+		    <!-- start soc_icons -->
+		</nav>
+		</div>
+	<div class="clearfix"></div>
+</div>
+</div>
+   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div class="footer_bg"><!-- start footer -->
+	<div class="container">
+		<div class="row  footer">
+			<div class="copy text-center">
+				<p><span>&#169; All rights reserved | Design by&nbsp;<a >Pragati Varshney & Syed Shamikh Iqbal</a></span></p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+    
+
